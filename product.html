@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">ShopProject</a>
@@ -25,25 +26,28 @@
             <a class="site-nav__link" href="contacts.html">Контакты</a>
           </li>
           <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--active" href="index.html#popular">Популярные товары</a>
+            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Заявка</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">Главная</a>
       <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
-      <span class="breadcrumbs__current">Товар 1</span>
+      <span class="breadcrumbs__current" aria-current="page">Товар 1</span>
     </nav>
 
     <article class="product-details">
       <img
         class="product-details__image"
         src="images/product-placeholder.svg"
-        alt="Изображение учебного товара"
+        alt="Учебный товар — демонстрационная карточка"
         width="480"
         height="320"
       >
@@ -71,15 +75,15 @@
         </thead>
         <tbody>
           <tr>
-            <td>Категория</td>
+            <th scope="row">Категория</th>
             <td>Учебный товар</td>
           </tr>
           <tr>
-            <td>Цена</td>
+            <th scope="row">Цена</th>
             <td>1000 руб.</td>
           </tr>
           <tr>
-            <td>Наличие</td>
+            <th scope="row">Наличие</th>
             <td>В наличии</td>
           </tr>
         </tbody>

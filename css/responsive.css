@@ -298,3 +298,57 @@ main {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* ===============================
+   19. Доступность: практика 13
+   =============================== */
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 1000;
+  max-width: calc(100% - 32px);
+  padding: 8px 12px;
+  color: #ffffff;
+  background-color: #111111;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 16px;
+  color: #ffffff;
+}
+
+:focus-visible,
+a:focus-visible,
+.button:focus-visible,
+.site-nav__link:focus-visible,
+.order-form__input:focus-visible,
+.order-form__input:focus-within,
+.order-form__select:focus-visible,
+.order-form__textarea:focus-visible,
+.table-wrapper:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.form-note {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.form-error {
+  margin: 0;
+  color: var(--color-danger);
+  font-weight: 700;
+}
+
+/* Учитываем настройку уменьшения анимации в системе пользователя. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
