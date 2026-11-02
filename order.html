@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Форма оформления заявки в учебном интернет-магазине.">
-  <title>Оформление заявки — Учебный интернет-магазин</title>
+  <title>Оформление заявки — Retro Shelf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
   <script src="js/main.js" defer></script>
@@ -12,8 +15,14 @@
 <body>
   <a class="skip-link" href="#main">Перейти к основному содержимому</a>
   <header class="site-header">
+    <div class="brand-banner">
+      <div class="brand-banner__inner">
+        <strong class="brand-banner__name">Retro Shelf</strong>
+        <p>Магазин ретрогейминга: консоли, комплектующие и аксессуары</p>
+      </div>
+    </div>
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">Retro Shelf</a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
@@ -99,12 +108,18 @@
 
         <div class="order-form__field">
           <label class="order-form__label" for="order-product">Выбранный товар *</label>
-          <select class="order-form__select" id="order-product" aria-describedby="order-product-error" name="product" required>
-            <option value="">Выберите товар</option>
-            <option value="product-1">Товар 1</option>
-            <option value="product-2">Товар 2</option>
-            <option value="product-3">Товар 3</option>
-          </select>
+          <select class="order-form__select" id="order-product" aria-describedby="order-product-error" name="product" required><option value="">Выберите товар</option>
+            <option value="mega-drive-2">Sega Mega Drive 2</option>
+            <option value="snes">Super Nintendo (SNES)</option>
+            <option value="ps1">PlayStation 1</option>
+            <option value="ps2">PlayStation 2</option>
+            <option value="psp">PlayStation Portable (PSP)</option>
+            <option value="ps-vita">PlayStation Vita</option>
+            <option value="nintendo-3ds">Nintendo 3DS</option>
+            <option value="ps1-laser">Лазер для PS1</option>
+            <option value="psu-9v">Блок питания 9V</option>
+            <option value="ps1-memory-card">Карта памяти для PS1</option>
+            <option value="md-pad">Геймпад 6 кнопок для Mega Drive</option></select>
           <p class="form-error" id="order-product-error" hidden></p>
         </div>
 
@@ -143,7 +158,7 @@
   </main>
 
   <footer class="site-footer">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p class="site-footer__text">&copy; 2026 Retro Shelf. Магазин ретрогейминга. Учебный проект.</p>
     <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
 

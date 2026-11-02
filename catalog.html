@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Каталог товаров учебного интернет-магазина.">
-  <title>Каталог товаров — Учебный интернет-магазин</title>
+  <meta name="description" content="Каталог товаров магазина ретрогейминга Retro Shelf.">
+  <title>Каталог товаров — Retro Shelf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к основному содержимому</a>
   <header class="site-header">
+    <div class="brand-banner">
+      <div class="brand-banner__inner">
+        <strong class="brand-banner__name">Retro Shelf</strong>
+        <p>Магазин ретрогейминга: консоли, комплектующие и аксессуары</p>
+      </div>
+    </div>
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">Retro Shelf</a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
@@ -44,11 +53,7 @@
 
     <section class="section">
       <h1 class="section__title">Каталог товаров</h1>
-      <p class="section__text">
-        На этой странице представлен учебный каталог товаров.
-        В дальнейшем здесь будут добавлены фильтры, сортировка и более
-        подробные карточки.
-      </p>
+      <p class="section__text">Консоли, комплектующие и аксессуары для ретро-платформ. Откройте карточку, чтобы узнать характеристики и совместимость.</p>
       <a class="button button--secondary" href="order.html">Оформить заявку</a>
     </section>
 
@@ -94,64 +99,112 @@
         <h2 class="catalog-products__title">Список товаров</h2>
 
         <div class="products-grid">
-            <article class="product-card">
-              <img class="product-card__image" src="images/product-640.jpg" srcset="images/product-480.jpg 480w, images/product-640.jpg 640w, images/product-960.jpg 960w" sizes="(min-width: 1200px) 225px, (min-width: 1024px) 35vw, (min-width: 768px) 50vw, 100vw" alt="Синяя упаковка учебного товара с белой лентой" width="640" height="427" loading="lazy">
-              <span class="product-card__badge">Хит</span>
-              <h3 class="product-card__title">Товар 1</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 1000 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре 1">Подробнее</a>
-            </article>
-
-            <article class="product-card">
-              <img class="product-card__image" src="images/product-640.jpg" srcset="images/product-480.jpg 480w, images/product-640.jpg 640w, images/product-960.jpg 960w" sizes="(min-width: 1200px) 225px, (min-width: 1024px) 35vw, (min-width: 768px) 50vw, 100vw" alt="Синяя упаковка учебного товара с белой лентой" width="640" height="427" loading="lazy">
-              <span class="product-card__badge">Новинка</span>
-              <h3 class="product-card__title">Товар 2</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 1500 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре 2">Подробнее</a>
-            </article>
-
-            <article class="product-card product-card--discount">
-              <img class="product-card__image" src="images/product-640.jpg" srcset="images/product-480.jpg 480w, images/product-640.jpg 640w, images/product-960.jpg 960w" sizes="(min-width: 1200px) 225px, (min-width: 1024px) 35vw, (min-width: 768px) 50vw, 100vw" alt="Синяя упаковка учебного товара с белой лентой" width="640" height="427" loading="lazy">
-              <span class="product-card__badge">Скидка</span>
-              <h3 class="product-card__title">Товар 3</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 2000 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре 3">Подробнее</a>
-            </article>
-
-            <article class="product-card">
-              <img class="product-card__image" src="images/product-640.jpg" srcset="images/product-480.jpg 480w, images/product-640.jpg 640w, images/product-960.jpg 960w" sizes="(min-width: 1200px) 225px, (min-width: 1024px) 35vw, (min-width: 768px) 50vw, 100vw" alt="Синяя упаковка учебного товара с белой лентой" width="640" height="427" loading="lazy">
-              <h3 class="product-card__title">Товар 4</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 2500 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре 4">Подробнее</a>
-            </article>
-
-            <article class="product-card">
-              <img class="product-card__image" src="images/product-640.jpg" srcset="images/product-480.jpg 480w, images/product-640.jpg 640w, images/product-960.jpg 960w" sizes="(min-width: 1200px) 225px, (min-width: 1024px) 35vw, (min-width: 768px) 50vw, 100vw" alt="Синяя упаковка учебного товара с белой лентой" width="640" height="427" loading="lazy">
-              <span class="product-card__badge">Новинка</span>
-              <h3 class="product-card__title">Товар 5</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 3000 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре 5">Подробнее</a>
-            </article>
-
-            <article class="product-card">
-              <img class="product-card__image" src="images/product-640.jpg" srcset="images/product-480.jpg 480w, images/product-640.jpg 640w, images/product-960.jpg 960w" sizes="(min-width: 1200px) 225px, (min-width: 1024px) 35vw, (min-width: 768px) 50vw, 100vw" alt="Синяя упаковка учебного товара с белой лентой" width="640" height="427" loading="lazy">
-              <h3 class="product-card__title">Товар 6</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 3500 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре 6">Подробнее</a>
-            </article>
+        <article class="product-card">
+          <img class="product-card__image" src="images/segamd2.jpeg" srcset="images/segamd2-480.jpg 480w, images/segamd2-960.jpg 960w" sizes="(min-width: 768px) 50vw, 100vw" alt="Sega Mega Drive 2" loading="lazy" width="960" height="720">
+          <p class="product-card__category">Консоли</p>
+          <h3 class="product-card__title">Sega Mega Drive 2</h3>
+          <p class="product-card__description">Компактная ревизия Mega Drive 1993 года. Проверена, очищена, выдаёт чистую картинку по AV. В комплекте блок питания и один геймпад.</p>
+          <p class="product-card__price">6&nbsp;500 руб.</p>
+          <a class="product-card__link" href="product.html#mega-drive-2" aria-label="Подробнее о товаре: Sega Mega Drive 2">Подробнее о товаре</a>
+          <a class="button button--secondary" href="order.html">Оставить заявку</a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" src="images/supernin.jpg" srcset="images/supernin-480.jpg 480w, images/supernin-960.jpg 960w" sizes="(min-width: 768px) 50vw, 100vw" alt="Super Nintendo (SNES)" loading="lazy" width="960" height="720">
+          <p class="product-card__category">Консоли</p>
+          <h3 class="product-card__title">Super Nintendo (SNES)</h3>
+          <p class="product-card__description">Оригинальная Super Nintendo, регион PAL. Корпус без сильных потёртостей, кнопки и слот картриджа проверены. Работает через композитный AV-выход.</p>
+          <p class="product-card__price">12&nbsp;900 руб.</p>
+          <a class="product-card__link" href="product.html#snes" aria-label="Подробнее о товаре: Super Nintendo (SNES)">Подробнее о товаре</a>
+          <a class="button button--secondary" href="order.html">Оставить заявку</a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" src="images/ps1.jpeg" srcset="images/ps1-480.jpg 480w, images/ps1-960.jpg 960w" sizes="(min-width: 768px) 50vw, 100vw" alt="PlayStation 1" loading="lazy" width="960" height="720">
+          <p class="product-card__category">Консоли</p>
+          <h3 class="product-card__title">PlayStation 1</h3>
+          <p class="product-card__description">Консоль PlayStation 1 в рабочем состоянии. Привод проверен на нескольких дисках, в комплекте блок питания, AV-кабель и геймпад.</p>
+          <p class="product-card__price">5&nbsp;900 руб.</p>
+          <a class="product-card__link" href="product.html#ps1" aria-label="Подробнее о товаре: PlayStation 1">Подробнее о товаре</a>
+          <a class="button button--secondary" href="order.html">Оставить заявку</a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" src="images/ps2.jpg" srcset="images/ps2-480.jpg 480w, images/ps2-960.jpg 960w" sizes="(min-width: 768px) 50vw, 100vw" alt="PlayStation 2" loading="lazy" width="960" height="720">
+          <p class="product-card__category">Консоли</p>
+          <h3 class="product-card__title">PlayStation 2</h3>
+          <p class="product-card__description">PlayStation 2 с проверенным приводом, читает диски PS2 и PS1. В комплекте блок питания, AV-кабель и геймпад.</p>
+          <p class="product-card__price">7&nbsp;500 руб.</p>
+          <a class="product-card__link" href="product.html#ps2" aria-label="Подробнее о товаре: PlayStation 2">Подробнее о товаре</a>
+          <a class="button button--secondary" href="order.html">Оставить заявку</a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" src="images/psp.jpeg" srcset="images/psp-480.jpg 480w, images/psp-960.jpg 960w" sizes="(min-width: 768px) 50vw, 100vw" alt="PlayStation Portable (PSP)" loading="lazy" width="960" height="720">
+          <p class="product-card__category">Консоли</p>
+          <h3 class="product-card__title">PlayStation Portable (PSP)</h3>
+          <p class="product-card__description">PSP с исправным экраном и кнопками, аккумулятор держит заряд. В комплекте зарядное устройство.</p>
+          <p class="product-card__price">6&nbsp;900 руб.</p>
+          <a class="product-card__link" href="product.html#psp" aria-label="Подробнее о товаре: PlayStation Portable (PSP)">Подробнее о товаре</a>
+          <a class="button button--secondary" href="order.html">Оставить заявку</a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" src="images/psvita.jpeg" srcset="images/psvita-480.jpg 480w, images/psvita-960.jpg 960w" sizes="(min-width: 768px) 50vw, 100vw" alt="PlayStation Vita" loading="lazy" width="960" height="720">
+          <p class="product-card__category">Консоли</p>
+          <h3 class="product-card__title">PlayStation Vita</h3>
+          <p class="product-card__description">PlayStation Vita с исправным экраном, стиками и сенсорной панелью. Аккумулятор держит заряд, в комплекте зарядное устройство.</p>
+          <p class="product-card__price">11&nbsp;900 руб.</p>
+          <a class="product-card__link" href="product.html#ps-vita" aria-label="Подробнее о товаре: PlayStation Vita">Подробнее о товаре</a>
+          <a class="button button--secondary" href="order.html">Оставить заявку</a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" src="images/3ds.jpeg" srcset="images/3ds-480.jpg 480w, images/3ds-960.jpg 960w" sizes="(min-width: 768px) 50vw, 100vw" alt="Nintendo 3DS" loading="lazy" width="960" height="720">
+          <p class="product-card__category">Консоли</p>
+          <h3 class="product-card__title">Nintendo 3DS</h3>
+          <p class="product-card__description">Nintendo 3DS с рабочим 3D-эффектом, обоими экранами и кнопками. В комплекте зарядное устройство и стилус.</p>
+          <p class="product-card__price"><s>12&nbsp;500 руб.</s> 10&nbsp;500 руб.</p>
+          <a class="product-card__link" href="product.html#nintendo-3ds" aria-label="Подробнее о товаре: Nintendo 3DS">Подробнее о товаре</a>
+          <a class="button button--secondary" href="order.html">Оставить заявку</a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" src="images/laser.jpeg" srcset="images/laser-480.jpg 480w, images/laser-960.jpg 960w" sizes="(min-width: 768px) 50vw, 100vw" alt="Лазер для PS1" loading="lazy" width="960" height="720">
+          <p class="product-card__category">Комплектующие</p>
+          <h3 class="product-card__title">Лазер для PS1</h3>
+          <p class="product-card__description">Новый лазер для ремонта PlayStation 1. Перед покупкой уточните модель вашей консоли: у разных ревизий лазеры отличаются.</p>
+          <p class="product-card__price">1&nbsp;800 руб.</p>
+          <a class="product-card__link" href="product.html#ps1-laser" aria-label="Подробнее о товаре: Лазер для PS1">Подробнее о товаре</a>
+          <a class="button button--secondary" href="order.html">Оставить заявку</a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" src="images/9v.jpeg" srcset="images/9v-480.jpg 480w, images/9v-960.jpg 960w" sizes="(min-width: 768px) 50vw, 100vw" alt="Блок питания 9V" loading="lazy" width="960" height="720">
+          <p class="product-card__category">Комплектующие</p>
+          <h3 class="product-card__title">Блок питания 9V</h3>
+          <p class="product-card__description">Стабилизированный блок питания 9 В с переходниками. Подходит для Mega Drive и SNES. Перед подключением проверьте полярность штекера.</p>
+          <p class="product-card__price">1&nbsp;200 руб.</p>
+          <a class="product-card__link" href="product.html#psu-9v" aria-label="Подробнее о товаре: Блок питания 9V">Подробнее о товаре</a>
+          <a class="button button--secondary" href="order.html">Оставить заявку</a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" src="images/storage.jpeg" srcset="images/storage-480.jpg 480w, images/storage-960.jpg 960w" sizes="(min-width: 768px) 50vw, 100vw" alt="Карта памяти для PS1" loading="lazy" width="960" height="720">
+          <p class="product-card__category">Аксессуары</p>
+          <h3 class="product-card__title">Карта памяти для PS1</h3>
+          <p class="product-card__description">Карта памяти для PlayStation 1 на 15 блоков, хватит на несколько десятков часов игры. Проверена на запись и чтение.</p>
+          <p class="product-card__price"><s>1&nbsp;200 руб.</s> 900&nbsp;руб.</p>
+          <a class="product-card__link" href="product.html#ps1-memory-card" aria-label="Подробнее о товаре: Карта памяти для PS1">Подробнее о товаре</a>
+          <a class="button button--secondary" href="order.html">Оставить заявку</a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" src="images/gamepad.jpeg" srcset="images/gamepad-480.jpg 480w, images/gamepad-960.jpg 960w" sizes="(min-width: 768px) 50vw, 100vw" alt="Геймпад 6 кнопок для Mega Drive" loading="lazy" width="960" height="720">
+          <p class="product-card__category">Аксессуары</p>
+          <h3 class="product-card__title">Геймпад 6 кнопок для Mega Drive</h3>
+          <p class="product-card__description">Шестикнопочный геймпад в стиле оригинального контроллера Mega Drive. Кнопки и крестовина проверены, шнур без перегибов.</p>
+          <p class="product-card__price">1&nbsp;500 руб.</p>
+          <a class="product-card__link" href="product.html#md-pad" aria-label="Подробнее о товаре: Геймпад 6 кнопок для Mega Drive">Подробнее о товаре</a>
+          <a class="button button--secondary" href="order.html">Оставить заявку</a>
+        </article>
         </div>
       </section>
     </div>
   </main>
 
   <footer class="site-footer">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p class="site-footer__text">&copy; 2026 Retro Shelf. Магазин ретрогейминга. Учебный проект.</p>
     <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
   <a class="button button--primary scroll-top" href="#" aria-label="Наверх">Наверх</a>

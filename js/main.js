@@ -81,3 +81,27 @@ if (orderForm) {
     }
   });
 }
+
+// Простая карусель: меняем видимый слайд по кнопкам, без автопрокрутки.
+const carouselSlides = document.querySelectorAll('.carousel__slide');
+const carouselPrev = document.getElementById('carousel-prev');
+const carouselNext = document.getElementById('carousel-next');
+const carouselCounter = document.getElementById('carousel-counter');
+let currentSlide = 0;
+
+function showSlide(index) {
+  currentSlide = (index + carouselSlides.length) % carouselSlides.length;
+  carouselSlides.forEach((slide, number) => {
+    slide.hidden = number !== currentSlide;
+  });
+  carouselCounter.textContent = (currentSlide + 1) + ' / ' + carouselSlides.length;
+}
+
+if (carouselNext) {
+  carouselPrev.addEventListener('click', () => {
+    showSlide(currentSlide - 1);
+  });
+  carouselNext.addEventListener('click', () => {
+    showSlide(currentSlide + 1);
+  });
+}

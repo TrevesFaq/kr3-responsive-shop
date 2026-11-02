@@ -4,14 +4,14 @@
 
 :root {
   /* Основные цвета проекта */
-  --color-bg: #ffffff;
-  --color-text: #222222;
-  --color-muted: #666666;
-  --color-primary: #0057b8;
-  --color-primary-dark: #003f86;
-  --color-border: #dddddd;
-  --color-surface: #f7f7f7;
-  --color-surface-accent: #eef5ff;
+  --color-bg: #ece8dc;
+  --color-text: #25203a;
+  --color-muted: #615c53;
+  --color-primary: #b52f26;
+  --color-primary-dark: #8a231d;
+  --color-border: #d8d2c0;
+  --color-surface: #f7f4ed;
+  --color-surface-accent: #e6e1d3;
   --color-danger: #b00020;
   --color-success: #116b24;
   --color-success-bg: #eefaf0;
