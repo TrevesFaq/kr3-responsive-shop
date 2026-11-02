@@ -6,6 +6,7 @@
   <meta name="description" content="Карточка товара учебного интернет-магазина: описание, характеристики и цена.">
   <title>Товар 1 — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
   <header class="site-header">
@@ -59,12 +60,13 @@
     </article>
 
     <section class="section">
+      <div class="table-wrapper" tabindex="0" role="region" aria-label="Характеристики товара: горизонтальная прокрутка">
       <table class="product-table">
         <caption class="product-table__caption">Характеристики товара</caption>
         <thead>
           <tr>
-            <th>Параметр</th>
-            <th>Значение</th>
+            <th scope="col">Параметр</th>
+            <th scope="col">Значение</th>
           </tr>
         </thead>
         <tbody>
@@ -82,6 +84,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
     </section>
 
     <aside class="aside-info">

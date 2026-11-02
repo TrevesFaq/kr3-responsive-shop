@@ -6,6 +6,8 @@
   <meta name="description" content="Форма оформления заявки в учебном интернет-магазине.">
   <title>Оформление заявки — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -43,7 +45,7 @@
         Заполните форму, и мы свяжемся с вами для уточнения деталей заказа.
       </p>
 
-      <form class="order-form order-form--page" action="#" method="post">
+      <form class="order-form order-form--page" action="#" method="post" novalidate>
         <div class="order-form__field">
           <label class="order-form__label" for="order-name">Имя</label>
           <input
@@ -96,7 +98,7 @@
           </select>
         </div>
 
-        <div class="order-form__field">
+        <div class="order-form__field order-form__field--wide">
           <label class="order-form__label" for="order-comment">Комментарий</label>
           <textarea
             class="order-form__textarea"
@@ -107,8 +109,8 @@
           ></textarea>
         </div>
 
-        <div class="order-form__field">
-          <label class="order-form__label">
+        <div class="order-form__field order-form__field--wide">
+          <label class="order-form__label order-form__label--agreement" for="order-agreement">
             <input
               class="order-form__checkbox"
               id="order-agreement"
@@ -124,6 +126,7 @@
           <button class="button button--primary" type="submit">Отправить заявку</button>
         </div>
       </form>
+      <p class="success-message" id="success-message" role="status" hidden>Заявка проверена. Это учебная демонстрация: данные не отправляются на сервер.</p>
     </section>
   </main>
 

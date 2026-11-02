@@ -1,0 +1,73 @@
+/*
+  Адаптивные стили для контрольной работы №3.
+  Подход: Mobile First. Базовые стили — для мобильного экрана,
+  расширения — через min-width медиазапросы.
+*/
+*, *::before, *::after { box-sizing: border-box; }
+img { display: block; max-width: 100%; height: auto; }
+body { overflow-wrap: anywhere; }
+main { padding: 16px; }
+.site-header__inner { display: flex; flex-direction: column; gap: 16px; padding: 16px; }
+.site-nav { min-width: 0; width: 100%; }
+.site-nav__list { flex-direction: column; align-items: stretch; gap: 8px; margin: 0; }
+.site-nav__link { display: block; min-height: 44px; }
+.button { min-height: 44px; text-align: center; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 24px 16px; }
+.hero__title { margin-top: 0; font-size: clamp(1.75rem, 4vw, 3rem); line-height: 1.2; }
+.hero__actions { display: flex; flex-direction: column; gap: 12px; }
+.hero__image { width: 100%; border-radius: var(--radius-md); }
+.products-grid, .reviews, .product-details { grid-template-columns: minmax(0, 1fr); }
+.products-grid, .reviews { gap: 16px; }
+.product-card, .catalog-layout__products, .product-details__info, .hero__content { min-width: 0; }
+.product-card__image { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius-sm); }
+.catalog-layout { grid-template-columns: minmax(0, 1fr); grid-template-areas: "filters" "products"; }
+.catalog-layout__filters { position: static; }
+.catalog-filters__group { min-width: 0; }
+.catalog-filters__input { min-width: 0; min-height: 44px; }
+.catalog-filters__label { padding-block: 6px; }
+.order-form { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.order-form__field { display: grid; align-content: start; gap: 4px; min-width: 0; margin: 0; }
+.order-form__input, .order-form__select, .order-form__textarea { min-width: 0; max-width: 100%; min-height: 44px; }
+.order-form__textarea { min-height: 120px; resize: vertical; }
+.order-form__actions { flex-direction: column; margin-top: 0; }
+.order-form__label--agreement { min-height: 44px; padding-block: 10px; }
+.order-form--page { max-width: 760px; }
+.table-wrapper { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-wrapper:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
+.product-table { min-width: 640px; }
+.product-table th, .product-table td { padding: 12px; }
+.order-dialog { width: min(100% - 32px, 560px); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); overflow: auto; padding: 16px; }
+.order-dialog::backdrop { background: rgb(0 0 0 / 0.5); }
+/* В потоке на телефоне кнопка не перекрывает поля и текст. */
+.scroll-top { position: static; display: block; width: fit-content; margin: 16px 16px 24px auto; }
+.site-footer { padding: 24px 16px; }
+.success-message { margin: 16px; }
+
+@media (min-width: 768px) {
+  main { padding: 24px; }
+  .site-header__inner { padding: 24px; }
+  .site-nav__list { flex-direction: row; flex-wrap: wrap; justify-content: flex-start; }
+  .hero { padding: 32px 24px; }
+  .hero__actions { flex-direction: row; flex-wrap: wrap; }
+  .products-grid, .reviews, .product-details { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .order-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .order-form__field--wide, .order-form__actions { grid-column: 1 / -1; }
+  .order-form__actions { flex-direction: row; flex-wrap: wrap; }
+  .order-dialog { padding: 24px; }
+  .site-footer { padding: 24px max(24px, calc((100% - 1100px) / 2)); padding-bottom: 88px; }
+  .scroll-top { position: fixed; right: 32px; bottom: 32px; z-index: 90; margin: 0; }
+}
+
+@media (min-width: 1024px) {
+  .site-header__inner { flex-direction: row; align-items: center; justify-content: space-between; }
+  .site-nav { width: auto; }
+  .hero { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; }
+  .products-grid, .reviews { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .catalog-layout { grid-template-columns: 260px minmax(0, 1fr); grid-template-areas: "filters products"; }
+  .catalog-layout__filters { position: sticky; top: 16px; }
+  .catalog-layout .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1200px) {
+  .catalog-layout .products-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
