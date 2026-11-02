@@ -1,38 +1,52 @@
+﻿// Получаем элементы модального окна и формы заявки.
 const orderDialog = document.getElementById('order-dialog');
+const orderButtons = document.querySelectorAll('button.product-card__button');
+const closeDialogButton = document.getElementById('close-order-dialog');
 const selectedProductInput = document.getElementById('selected-product');
+const orderForm = document.querySelector('.order-form');
 const successMessage = document.getElementById('success-message');
 
-document.querySelectorAll('button[data-product]').forEach((button) => {
+// Открываем модальное окно и записываем выбранный товар.
+orderButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    if (!orderDialog || !selectedProductInput) return;
     selectedProductInput.value = button.dataset.product;
-    if (successMessage) successMessage.hidden = true;
+    successMessage.hidden = true;
     orderDialog.showModal();
   });
 });
 
-document.getElementById('close-order-dialog')?.addEventListener('click', () => {
-  orderDialog?.close();
-});
-
-document.querySelectorAll('.order-form').forEach((form) => {
-  form.addEventListener('input', (event) => {
-    event.target.removeAttribute('aria-invalid');
-    if (successMessage) successMessage.hidden = true;
+if (closeDialogButton) {
+  closeDialogButton.addEventListener('click', () => {
+    orderDialog.close();
   });
-  form.addEventListener('submit', (event) => {
+}
+
+// Проверяем форму без отправки на сервер: backend пока не подключён.
+if (orderForm) {
+  orderForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const fields = Array.from(form.elements).filter((field) => field.willValidate);
-    fields.forEach((field) => {
-      field.removeAttribute('aria-invalid');
-      if (!field.checkValidity()) field.setAttribute('aria-invalid', 'true');
+
+    const formElements = Array.from(orderForm.elements);
+    formElements.forEach((element) => {
+      if (element.willValidate) {
+        element.removeAttribute('aria-invalid');
+      }
     });
-    if (!form.reportValidity()) return;
-    form.reset();
-    orderDialog?.close();
-    if (successMessage) {
-      successMessage.hidden = false;
-      successMessage.scrollIntoView({ block: 'nearest' });
+
+    if (!orderForm.checkValidity()) {
+      formElements.forEach((element) => {
+        if (element.willValidate && !element.checkValidity()) {
+          element.setAttribute('aria-invalid', 'true');
+        }
+      });
+      orderForm.reportValidity();
+      return;
+    }
+
+    successMessage.hidden = false;
+    orderForm.reset();
+    if (orderDialog) {
+      orderDialog.close();
     }
   });
-});
+}
