@@ -4,7 +4,6 @@ const carousel = document.querySelector('.carousel');
 if (carousel) {
   const slides = Array.from(carousel.querySelectorAll('.carousel__slide'));
   const dots = Array.from(carousel.querySelectorAll('.carousel__dot'));
-  const pauseButton = carousel.querySelector('.carousel__pause');
   let activeIndex = 0;
   let timer;
   let isPaused = false;
@@ -44,13 +43,6 @@ if (carousel) {
     });
   });
 
-  pauseButton.addEventListener('click', () => {
-    isPaused = !isPaused;
-    pauseButton.textContent = isPaused ? 'Продолжить' : 'Пауза';
-    pauseButton.setAttribute('aria-pressed', String(isPaused));
-    startTimer();
-  });
-
   carousel.addEventListener('mouseenter', () => window.clearInterval(timer));
   carousel.addEventListener('mouseleave', startTimer);
   carousel.addEventListener('focusin', () => window.clearInterval(timer));
@@ -59,8 +51,6 @@ if (carousel) {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduceMotion) {
     isPaused = true;
-    pauseButton.textContent = 'Продолжить';
-    pauseButton.setAttribute('aria-pressed', 'true');
   } else {
     startTimer();
   }
