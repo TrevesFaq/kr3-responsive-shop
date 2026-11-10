@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Retro Shelf — магазин ретрогейминга: консоли, комплектующие и аксессуары.">
+  <title>Главная — Retro Shelf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+  <header class="site-header">
+    <div class="site-header__intro wrap">
+      <div><a class="site-header__name pixel" href="index.html">Retro Shelf</a><p>Магазин ретрогейминга: консоли, комплектующие и аксессуары</p></div>
+    </div>
+  </header>
+  <nav class="site-nav" aria-label="Основная навигация"><div class="wrap site-nav__inner">
+    <a class="site-nav__brand pixel" href="index.html">Retro Shelf</a>
+    <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="main-menu">Меню</button>
+    <ul class="site-nav__list" id="main-menu">        <li><a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a></li>
+        <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+        <li><a class="site-nav__link" href="product.html">Товар</a></li>
+        <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+        <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+      <li class="site-nav__more"><a class="site-nav__link" href="catalog.html">Дополнительно</a><ul><li><a href="catalog.html">Все товары</a></li><li><a href="order.html">Оформить заявку</a></li><li><a href="index.html#popular">Популярное</a></li></ul></li>
+    </ul>
+  </div></nav>
+  <main id="main">
+    <section class="hero wrap"><div><p class="eyebrow">Игры, с которых всё началось</p><h1 class="pixel">Играйте в игры, на которых вы выросли</h1><p>Проверенные консоли 8 и 16 бит, запчасти для ремонта и аксессуары, чтобы всё работало как в детстве.</p><a class="button" href="catalog.html">Перейти в каталог</a></div></section>
+    <section class="section wrap" aria-label="Популярные товары">
+      <div class="carousel" role="region" aria-roledescription="карусель" aria-label="Популярные товары">
+        <div class="carousel__slides">        <article class="carousel__slide is-active" role="group" aria-roledescription="слайд" aria-label="Слайд 1 из 3" data-slide="0" aria-hidden="false">
+          <img src="images/segamd2.jpeg" alt="Sega Mega Drive 2" width="2000" height="1043">
+          <div class="carousel__caption"><span class="tag">6 500 руб.</span><h2>Sega Mega Drive 2</h2><p>16-битная классика Sega: Sonic, Streets of Rage, Golden Axe.</p><a class="button" href="product.html#mega-drive-2">Подробнее</a></div>
+        </article>
+        <article class="carousel__slide" role="group" aria-roledescription="слайд" aria-label="Слайд 2 из 3" data-slide="1" aria-hidden="true">
+          <img src="images/ps2.jpg" alt="PlayStation 2" width="1280" height="771">
+          <div class="carousel__caption"><span class="tag">7 500 руб.</span><h2>PlayStation 2</h2><p>Одна из самых продаваемых консолей в истории: GTA, God of War, Metal Gear Solid.</p><a class="button" href="product.html#ps2">Подробнее</a></div>
+        </article>
+        <article class="carousel__slide" role="group" aria-roledescription="слайд" aria-label="Слайд 3 из 3" data-slide="2" aria-hidden="true">
+          <img src="images/3ds.jpeg" alt="Nintendo 3DS" width="2000" height="1125">
+          <div class="carousel__caption"><span class="tag">10 500 руб.</span><h2>Nintendo 3DS</h2><p>Портативная консоль Nintendo с двумя экранами и 3D-режимом.</p><a class="button" href="product.html#nintendo-3ds">Подробнее</a></div>
+        </article></div>
+        <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Предыдущий слайд">‹</button><button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Следующий слайд">›</button>
+        <div class="carousel__controls"><button class="carousel__pause" type="button" aria-pressed="false">Пауза</button><div class="carousel__dots"><button class="carousel__dot is-active" type="button" aria-label="Слайд 1" aria-current="true" data-go-to="0"></button><button class="carousel__dot" type="button" aria-label="Слайд 2" aria-current="false" data-go-to="1"></button><button class="carousel__dot" type="button" aria-label="Слайд 3" aria-current="false" data-go-to="2"></button></div></div>
+      </div>
+    </section>
+    <section class="section wrap"><h2 class="section__title">Почему у нас</h2><div class="feature-grid">
+      <article class="feature"><span class="feature__number">01</span><h3>Проверено перед продажей</h3><p>Каждую консоль чистим и тестируем: картинка, звук, кнопки и слот картриджа.</p></article>
+      <article class="feature"><span class="feature__number">02</span><h3>Всё для ремонта</h3><p>Блоки питания, лазерные головки и другие детали для старых консолей.</p></article>
+      <article class="feature"><span class="feature__number">03</span><h3>Подберём совместимое</h3><p>Напишите модель консоли, и мы подскажем подходящие геймпады и кабели.</p></article>
+    </div></section>
+    <section class="section wrap" id="popular"><div class="section__heading"><h2 class="section__title">Популярные товары</h2><a class="text-link" href="catalog.html">Все товары →</a></div><div class="product-grid">
+      <article class="product-card"><img src="images/segamd2.jpeg" alt="Sega Mega Drive 2" width="2000" height="1043"><div class="product-card__body"><span class="tag">Новинка</span><p class="product-card__category">Консоли</p><h3>Sega Mega Drive 2</h3><p>16-битная классика Sega: Sonic, Streets of Rage, Golden Axe.</p><strong>6 500 руб.</strong><a class="button" href="product.html#mega-drive-2">Подробнее</a></div></article>
+      <article class="product-card"><img src="images/ps2.jpg" alt="PlayStation 2" width="1280" height="771"><div class="product-card__body"><span class="tag">Хит</span><p class="product-card__category">Консоли</p><h3>PlayStation 2</h3><p>Одна из самых продаваемых консолей в истории: GTA, God of War, Metal Gear Solid.</p><strong>7 500 руб.</strong><a class="button" href="product.html#ps2">Подробнее</a></div></article>
+      <article class="product-card"><img src="images/9v.jpeg" alt="Блок питания 9V" width="820" height="484"><div class="product-card__body"><span class="tag">Хит</span><p class="product-card__category">Комплектующие</p><h3>Блок питания 9V</h3><p>Универсальный блок питания для 16-битных консолей.</p><strong>1 200 руб.</strong><a class="button" href="product.html#psu-9v">Подробнее</a></div></article>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap site-footer__inner">
+    <p>© 2026 Retro Shelf. Магазин ретрогейминга. Учебный проект.</p>
+    <div><a href="catalog.html">Каталог</a><a href="order.html">Заявка</a><a href="contacts.html">Контакты</a></div>
+  </div></footer>
+</body>
+</html>

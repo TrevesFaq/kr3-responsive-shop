@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Retro Shelf — магазин ретрогейминга: консоли, комплектующие и аксессуары.">
+  <title>Каталог — Retro Shelf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+  <header class="site-header">
+    <div class="site-header__intro wrap">
+      <div><a class="site-header__name pixel" href="index.html">Retro Shelf</a><p>Магазин ретрогейминга: консоли, комплектующие и аксессуары</p></div>
+      </div>
+  </header>
+  <nav class="site-nav" aria-label="Основная навигация"><div class="wrap site-nav__inner">
+    <a class="site-nav__brand pixel" href="index.html">Retro Shelf</a>
+    <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="main-menu">Меню</button>
+    <ul class="site-nav__list" id="main-menu">        <li><a class="site-nav__link" href="index.html">Главная</a></li>
+        <li><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+        <li><a class="site-nav__link" href="product.html">Товар</a></li>
+        <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+        <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+      <li class="site-nav__more"><a class="site-nav__link" href="catalog.html">Дополнительно</a><ul><li><a href="catalog.html">Все товары</a></li><li><a href="order.html">Оформить заявку</a></li><li><a href="index.html#popular">Популярное</a></li></ul></li>
+    </ul>
+  </div></nav>
+  <main id="main" class="wrap page-main"><p class="notice">Консоли, комплектующие и аксессуары для ретро-платформ. Выберите товар, чтобы открыть подробную карточку.</p><div class="section__heading"><h1 class="pixel">Каталог товаров</h1><a class="button button--outline" href="order.html">Оставить заявку</a></div><div class="catalog-layout">
+<aside class="catalog-filters" aria-labelledby="filters-title">
+  <h2 id="filters-title">Фильтры</h2>
+  <form action="#products" method="get">
+    <fieldset><legend>Категория</legend>
+      <label><input type="checkbox" name="category" value="all"> Все товары</label>
+      <label><input type="checkbox" name="category" value="popular"> Популярные</label>
+      <label><input type="checkbox" name="category" value="new"> Новинки</label>
+    </fieldset>
+    <fieldset><legend>Цена</legend>
+      <label for="price-from">От</label><input id="price-from" name="price-from" type="number" min="0" placeholder="0">
+      <label for="price-to">До</label><input id="price-to" name="price-to" type="number" min="0" placeholder="15000">
+    </fieldset>
+    <button class="button" type="submit">Применить</button>
+  </form>
+</aside>
+<section class="catalog-products" id="products" aria-labelledby="products-title">
+  <h2 id="products-title">Товары</h2>
+  <div class="product-grid product-grid--catalog">
+<article class="product-card"><img src="images/segamd2-640.jpg"
+     srcset="images/segamd2-480.jpg 480w, images/segamd2-640.jpg 640w, images/segamd2-960.jpg 960w"
+     sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
+     alt="Sega Mega Drive 2" width="640" height="334" loading="lazy" class="product-card__image"><div class="product-card__body"><span class="tag">Новинка</span><p class="product-card__category">Консоли</p><h2>Sega Mega Drive 2</h2><p>16-битная классика Sega: Sonic, Streets of Rage, Golden Axe.</p><strong>6 500 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#mega-drive-2">Подробнее</a><a class="button button--outline" href="order.html?product=mega-drive-2">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/supernin.jpg" alt="Super Nintendo (SNES)" width="1600" height="832" loading="lazy" class="product-card__image"><div class="product-card__body"><span class="tag">Выбор покупателей</span><p class="product-card__category">Консоли</p><h2>Super Nintendo (SNES)</h2><p>Консоль 1990-х с Super Mario World и Zelda: A Link to the Past.</p><strong>12 900 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#snes">Подробнее</a><a class="button button--outline" href="order.html?product=snes">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/ps1.jpeg" alt="PlayStation 1" width="2000" height="1125" loading="lazy" class="product-card__image"><div class="product-card__body"><p class="product-card__category">Консоли</p><h2>PlayStation 1</h2><p>Первая PlayStation: Crash Bandicoot, Resident Evil, Final Fantasy VII.</p><strong>5 900 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#ps1">Подробнее</a><a class="button button--outline" href="order.html?product=ps1">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/ps2.jpg" alt="PlayStation 2" width="1280" height="771" loading="lazy" class="product-card__image"><div class="product-card__body"><span class="tag">Хит</span><p class="product-card__category">Консоли</p><h2>PlayStation 2</h2><p>Одна из самых продаваемых консолей в истории: GTA, God of War, Metal Gear Solid.</p><strong>7 500 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#ps2">Подробнее</a><a class="button button--outline" href="order.html?product=ps2">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/psp.jpeg" alt="PlayStation Portable (PSP)" width="2000" height="1118" loading="lazy" class="product-card__image"><div class="product-card__body"><span class="tag">Новинка</span><p class="product-card__category">Консоли</p><h2>PlayStation Portable (PSP)</h2><p>Портативная консоль Sony с играми на UMD и большим экраном.</p><strong>6 900 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#psp">Подробнее</a><a class="button button--outline" href="order.html?product=psp">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/psvita.jpeg" alt="PlayStation Vita" width="2000" height="1125" loading="lazy" class="product-card__image"><div class="product-card__body"><span class="tag">Выбор покупателей</span><p class="product-card__category">Консоли</p><h2>PlayStation Vita</h2><p>Портативная консоль Sony с сенсорным экраном и двумя стиками.</p><strong>11 900 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#ps-vita">Подробнее</a><a class="button button--outline" href="order.html?product=ps-vita">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/3ds.jpeg" alt="Nintendo 3DS" width="2000" height="1125" loading="lazy" class="product-card__image"><div class="product-card__body"><span class="tag">Скидка</span><p class="product-card__category">Консоли</p><h2>Nintendo 3DS</h2><p>Портативная консоль Nintendo с двумя экранами и 3D-режимом.</p><strong>10 500 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#nintendo-3ds">Подробнее</a><a class="button button--outline" href="order.html?product=nintendo-3ds">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/laser.jpeg" alt="Лазерная головка для PS1" width="2000" height="1125" loading="lazy" class="product-card__image"><div class="product-card__body"><p class="product-card__category">Комплектующие</p><h2>Лазерная головка для PS1</h2><p>Запасная лазерная головка для восстановления привода PlayStation.</p><strong>1 800 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#ps1-laser">Подробнее</a><a class="button button--outline" href="order.html?product=ps1-laser">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/9v.jpeg" alt="Блок питания 9V" width="820" height="484" loading="lazy" class="product-card__image"><div class="product-card__body"><span class="tag">Хит</span><p class="product-card__category">Комплектующие</p><h2>Блок питания 9V</h2><p>Универсальный блок питания для 16-битных консолей.</p><strong>1 200 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#psu-9v">Подробнее</a><a class="button button--outline" href="order.html?product=psu-9v">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/storage.jpeg" alt="Карта памяти для PS1" width="1601" height="1601" loading="lazy" class="product-card__image"><div class="product-card__body"><span class="tag">Скидка</span><p class="product-card__category">Комплектующие</p><h2>Карта памяти для PS1</h2><p>Карта памяти для сохранения прохождения на PlayStation 1.</p><strong>900 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#ps1-memory-card">Подробнее</a><a class="button button--outline" href="order.html?product=ps1-memory-card">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/gamepad.jpeg" alt="Геймпад 6 кнопок для Mega Drive" width="1280" height="741" loading="lazy" class="product-card__image"><div class="product-card__body"><p class="product-card__category">Комплектующие</p><h2>Геймпад 6 кнопок для Mega Drive</h2><p>Шестикнопочный контроллер для игр Sega Mega Drive.</p><strong>1 500 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#md-pad">Подробнее</a><a class="button button--outline" href="order.html?product=md-pad">Заказать</a></div></div></article>
+</div></section></div></main>
+  <footer class="site-footer"><div class="wrap site-footer__inner">
+    <p>© 2026 Retro Shelf. Магазин ретрогейминга. Учебный проект.</p>
+    <div><a href="catalog.html">Каталог</a><a href="order.html">Заявка</a><a href="contacts.html">Контакты</a></div>
+  </div></footer>
+</body>
+</html>

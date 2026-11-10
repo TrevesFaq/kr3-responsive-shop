@@ -1,0 +1,157 @@
+/*
+Адаптивные стили для контрольной работы №3.
+Подход: Mobile First.
+Базовые стили рассчитаны на мобильный экран.
+Расширения добавляются через min-width медиазапросы.
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.wrap {
+  width: min(100% - 32px, 1200px);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(24px, 5vw, 64px);
+}
+
+@media (min-width: 640px) {
+  .product-grid,
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .section__heading {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-nav__inner {
+    flex-wrap: nowrap;
+    padding-block: 0;
+  }
+
+  .site-nav__toggle {
+    display: none;
+  }
+
+  .site-nav__list {
+    display: flex;
+    flex-basis: auto;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-left: auto;
+  }
+
+  .site-nav__more {
+    position: relative;
+  }
+
+  .site-nav__more:hover ul,
+  .site-nav__more:focus-within ul {
+    display: block;
+  }
+
+  .hero {
+    padding-block: 52px;
+  }
+
+  .carousel__slide.is-active {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .carousel__slide > img {
+    height: 330px;
+  }
+
+  .carousel__caption {
+    padding: 28px clamp(22px, 5vw, 60px);
+  }
+
+  .carousel__arrow {
+    top: 44%;
+  }
+
+  .product-details {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .product-details > img {
+    max-height: 420px;
+  }
+
+  .form-card {
+    padding: 24px;
+  }
+
+  .form-card h1 {
+    margin: -24px -24px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-grid__wide {
+    grid-column: 1 / -1;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer__inner {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .catalog-layout {
+    grid-template-columns: 250px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .catalog-filters {
+    position: sticky;
+    top: 20px;
+    order: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .product-grid--catalog {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

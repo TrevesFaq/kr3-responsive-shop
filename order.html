@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Retro Shelf — магазин ретрогейминга: консоли, комплектующие и аксессуары.">
+  <title>Заявка — Retro Shelf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+  <header class="site-header">
+    <div class="site-header__intro wrap">
+      <div><a class="site-header__name pixel" href="index.html">Retro Shelf</a><p>Магазин ретрогейминга: консоли, комплектующие и аксессуары</p></div>
+      </div>
+  </header>
+  <nav class="site-nav" aria-label="Основная навигация"><div class="wrap site-nav__inner">
+    <a class="site-nav__brand pixel" href="index.html">Retro Shelf</a>
+    <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="main-menu">Меню</button>
+    <ul class="site-nav__list" id="main-menu">        <li><a class="site-nav__link" href="index.html">Главная</a></li>
+        <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+        <li><a class="site-nav__link" href="product.html">Товар</a></li>
+        <li><a class="site-nav__link site-nav__link--active" href="order.html" aria-current="page">Заявка</a></li>
+        <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+      <li class="site-nav__more"><a class="site-nav__link" href="catalog.html">Дополнительно</a><ul><li><a href="catalog.html">Все товары</a></li><li><a href="order.html">Оформить заявку</a></li><li><a href="index.html#popular">Популярное</a></li></ul></li>
+    </ul>
+  </div></nav>
+  <main id="main" class="wrap page-main"><section class="form-card"><h1 class="pixel">Форма заявки</h1><p class="form-note">Поля со звёздочкой обязательны для заполнения.</p><form class="order-form" id="page-order-form"><div class="form-grid">
+  <label>Имя *<input id="order-name" name="name" type="text" minlength="2" required></label><label>E-mail *<input id="order-email" name="email" type="email" required></label>
+  <label>Телефон<input id="order-phone" name="phone" type="tel" placeholder="+7 (900) 000-00-00"></label><label>Товар *<select name="product" id="order-product" required><option value="">Выберите товар</option>
+<option value="mega-drive-2">Sega Mega Drive 2</option>
+<option value="snes">Super Nintendo (SNES)</option>
+<option value="ps1">PlayStation 1</option>
+<option value="ps2">PlayStation 2</option>
+<option value="psp">PlayStation Portable (PSP)</option>
+<option value="ps-vita">PlayStation Vita</option>
+<option value="nintendo-3ds">Nintendo 3DS</option>
+<option value="ps1-laser">Лазерная головка для PS1</option>
+<option value="psu-9v">Блок питания 9V</option>
+<option value="ps1-memory-card">Карта памяти для PS1</option>
+<option value="md-pad">Геймпад 6 кнопок для Mega Drive</option>
+</select></label><label class="form-grid__wide">Комментарий<textarea id="order-comment" name="comment" rows="4" placeholder="Например, нужна ли проверка при получении"></textarea></label><label class="form-check form-grid__wide"><input type="checkbox" name="agreement" required> Я согласен на обработку данных *</label><div class="form-actions form-grid__wide"><button class="button" type="submit">Отправить заявку</button><button class="button button--outline" type="reset">Очистить</button></div><p class="form-success form-grid__wide" id="form-success" hidden>Заявка заполнена. Спасибо!</p></div></form></section></main>
+  <footer class="site-footer"><div class="wrap site-footer__inner">
+    <p>© 2026 Retro Shelf. Магазин ретрогейминга. Учебный проект.</p>
+    <div><a href="catalog.html">Каталог</a><a href="order.html">Заявка</a><a href="contacts.html">Контакты</a></div>
+  </div></footer>
+</body>
+</html>
